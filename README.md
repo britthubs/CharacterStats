@@ -18,8 +18,8 @@ Building a script to automate stat rolling
 
 ### Usage
 
-The user adds their character's name when asked and will get their characters health. They can then decide if they want to add another character or not. 
-At the end, there is a summary of every character and their health (color coordinated). The maximum amount of health is 48 hp.
+The user adds their character's name when asked and will get their character's health. They can decide if they want to add another character or not. 
+At the end, there is a summary of every character and their health (colour coordinated). The maximum amount of health is 48 hp.
 
 ## My process
 
