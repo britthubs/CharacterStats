@@ -17,7 +17,7 @@ A short program to roll stats for game characters. Will eventually be accustomed
 Building a script to automate stat rolling
 
 ### Usage
-To run make sure the right packages are installed, in the terminal write: '''pip install -r requirements.txt'''
+To run make sure the right packages are installed, in the terminal write: ```pip install -r requirements.txt ```
 The user adds their character's name when asked and will get their character's health. They can decide if they want to add another character or not. 
 At the end, there is a summary of every character and their health (colour coordinated). The maximum amount of health is 48 hp.
 
