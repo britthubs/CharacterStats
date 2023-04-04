@@ -30,7 +30,7 @@ At the end, there is a summary of every character and their health (colour coord
 
 ### Useful resources
 
-- [Replit's 100 days of python] (https://replit.com/learn/100-days-of-python/) - Not only did this help freshen up my memory, it also gave me the idea for a D&D stats program.
+- [Replit's 100 days of python](https://replit.com/learn/100-days-of-python/) - Not only did this help freshen up my memory, it also gave me the idea for a D&D stats program.
 
 ## Author
-Website - [Britt] (https://britthubs.repl.co)
+Website - [Britt](https://britthubs.repl.co)
