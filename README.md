@@ -1,5 +1,5 @@
 # CharacterStats
-A short programn to roll stats for game characters. Will eventually be accustomed to D&D stats. Right now it is just a d6 * d8 for hp.
+A short program to roll stats for game characters. Will eventually be accustomed to D&D stats. Right now it is just a d6 * d8 for hp.
 
 ## Table of contents
 - [Overview](#overview)
