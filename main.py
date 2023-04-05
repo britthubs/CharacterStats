@@ -2,6 +2,7 @@
 import random as ran
 import time as t
 from termcolor import colored
+import os
 
 # set up list
 names = []
@@ -31,11 +32,8 @@ while again == "y":
     if again == "y":
         six_eight()
 
-# loading screen
-for i in range(5):
-    print("Loading", "⎕" * i, end='\r')
-    t.sleep(0.5)
-print("Loading Done! \n\nThese are your characters and their stats:")
+os.system("clear")
+print("These are your characters and their stats:")
 print("*" * 42, "\n")
 
 # print a summary of names and stats
