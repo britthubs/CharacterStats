@@ -1,5 +1,5 @@
 # import
-import random as ran
+import random as rand
 from termcolor import colored
 import os
 
@@ -28,7 +28,7 @@ def three_dsix():
     names.append(charac)  # add the name of the character to a list for the summary at the end
     stats = []  # makes sure this list is empty again before adding stats to it
     for i in range(6):
-        stat = ran.randint(1,6) + ran.randint(1,6) + ran.randint(1,6) # 3d6 for one stat
+        stat = rand.randint(1,6) + rand.randint(1,6) + rand.randint(1,6) # 3d6 for one stat
         stats.append(stat)  # at the stat to a list for this character's stats
     stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
     print("Stats completed! \n")
@@ -38,7 +38,7 @@ def four_dsix_drop():
     names.append(charac)  # add the name of the character to a list for the summary at the end
     stats = []  # makes sure this list is empty again before adding stats to it
     for i in range(6):
-        dice = [ran.randint(1,6),ran.randint(1,6),ran.randint(1,6),ran.randint(1,6)]  #4d6 in a list
+        dice = [rand.randint(1,6),rand.randint(1,6),rand.randint(1,6),rand.randint(1,6)]  #4d6 in a list
         dice.remove(min(dice)) # remove the lowest value from the list
         stat = 0
         for number in dice:
