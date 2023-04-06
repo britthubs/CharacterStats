@@ -1,5 +1,6 @@
 # CharacterStats
-A short program to roll stats for dnd characters. Right now only the 3d6 method is available, but eventually more methods will be added.
+A short program to roll stats for dnd characters. Right now only the 3d6 and 4d6 drop lowest methods
+are available, but eventually more methods will be added.
 
 ## Table of contents
 - [Overview](#overview)
@@ -18,8 +19,13 @@ Building a script to automate stat rolling, learning how to make a gui
 
 ### Usage
 To make sure the right packages are installed, in the terminal write: ```pip install -r requirements.txt```
-The user adds their character's name when asked and will get their character's health. They can decide if they want to add another character or not. 
-At the end, there is a summary of every character and their stats (colour coordinated).
+
+The user can choose the method that will be used to roll stats, 
+add the name of their character and decide if they want to roll for other characters. 
+After this, they can decide if they want to add another character or not. When all characters are added,
+the user chooses to not add any more characters and a summary of all characters and stats (colour coded)
+will be given.
+
 
 ## Process
 
