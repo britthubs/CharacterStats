@@ -24,7 +24,7 @@ The user can choose the method that will be used to roll stats,
 add the name of their character and decide if they want to roll for other characters. 
 After this, they can decide if they want to add another character or not. When all characters are added,
 the user chooses to not add any more characters and a summary of all characters and stats (colour coded)
-will be given.
+is given.
 
 
 ## Process
