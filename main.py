@@ -12,12 +12,15 @@ stats_string = ""
 def method():
     print("Method Menu:")
     print("*" * 11)
-    print("1: 3d6 \n")
+    print("1: roll 3d6 and add them \n2: roll 4d6, drop lowest number and add them")
     methodNum = input("Type the number associated with your preferred method to roll for your character stats: ")
-    while methodNum != "1":
+    while methodNum != "1" and methodNum != "2":
         methodNum = input("Please only write the number associated with your preferred method: ")
     if methodNum == "1":
         three_dsix()  # go to the function for method 3d6
+    elif methodNum == "2":
+        four_dsix_drop()
+
 
 # 3d6 per stat
 def three_dsix():
@@ -28,7 +31,21 @@ def three_dsix():
         stat = ran.randint(1,6) + ran.randint(1,6) + ran.randint(1,6) # 3d6 for one stat
         stats.append(stat)  # at the stat to a list for this character's stats
     stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
+    print("Stats completed! \n")
 
+def four_dsix_drop():
+    charac = input("What's you character's name?: ")
+    names.append(charac)  # add the name of the character to a list for the summary at the end
+    stats = []  # makes sure this list is empty again before adding stats to it
+    for i in range(6):
+        dice = [ran.randint(1,6),ran.randint(1,6),ran.randint(1,6),ran.randint(1,6)]  #4d6 in a list
+        dice.remove(min(dice)) # remove the lowest value from the list
+        stat = 0
+        for number in dice:
+            stat += number  # add all the remaining numbers from the list
+        stats.append(stat)  # at the stat to a list for this character's stats
+    stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
+    print("Stats completed! \n")
 
 # print title
 print("🎲 Character Stats Generator 🎲")
@@ -37,13 +54,15 @@ method()  # shows the method menu
 
 
 # ask for repeat or not
-again = "y"
-while again == "y":
+
+while True:
     again = input("Roll for new character? \ny or n: ")
     while again != "y" and again != "n":
         again = input("Only write y for 'yes' and n for 'no' \nRoll for new character? \ny or n: ")
-    if again == "y":
-        method()  # shows the method menu
+    if again == "n":
+        break
+    method()  # shows the method menu
+
 
 
 os.system("clear")
