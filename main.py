@@ -65,7 +65,7 @@ while True:
 
 
 
-os.system("clear")
+os.system('cls' if os.name == 'nt' else 'clear')
 print("These are your characters and their stats:")
 print("*" * 42, "\n")
 
