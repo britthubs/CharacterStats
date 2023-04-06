@@ -14,7 +14,7 @@ def method():
     print("*" * 11)
     print("1: roll 3d6 and add them \n2: roll 4d6, drop lowest number and add them\n")
     methodNum = input("Type the number associated with your preferred method to roll for your character stats: ")
-    while methodNum != "1" and methodNum != "2":
+    while methodNum not in {"1","2"}:
         methodNum = input("Please only write the number associated with your preferred method: ")
     if methodNum == "1":
         three_dsix()  # go to the function for method 3d6
