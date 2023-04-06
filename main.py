@@ -8,10 +8,8 @@ names = []
 stats_tot = []
 stats_string = ""
 
-# method list + input method
 
-
-def method():
+def method():  # method list + input method
     print("Method Menu:")
     print("*" * 11)
     print("1: roll 3d6 and add them \n"
@@ -27,8 +25,23 @@ def method():
     elif methodNum == "3":
         four_dsix_drop()
 
-# 3d6 per stat
-def three_dsix():
+
+def three_dsix_drop():  # 3 times 3d6, pick highest
+    charac = input("What's you character's name?: ")
+    names.append(charac)  # add the name of the character to a list for the summary at the end
+    stats = []  # makes sure this list is empty again before adding stats to it
+    for i in range(6):
+        dice = [rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6),
+                rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6),
+                rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6)
+                ]  # 3 times 3d6 for one stat
+        stat = max(dice)  # take the highest number from the list
+        stats.append(stat)  # at the stat to a list for this character's stats
+    stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
+    print("Stats completed! \n")
+
+
+def three_dsix():  # 3d6 per stat
     charac = input("What's you character's name?: ")
     names.append(charac)  # add the name of the character to a list for the summary at the end
     stats = []  # makes sure this list is empty again before adding stats to it
@@ -38,7 +51,8 @@ def three_dsix():
     stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
     print("Stats completed! \n")
 
-def four_dsix_drop():
+
+def four_dsix_drop():  # 4d6 drop the lowest
     charac = input("What's you character's name?: ")
     names.append(charac)  # add the name of the character to a list for the summary at the end
     stats = []  # makes sure this list is empty again before adding stats to it
@@ -48,21 +62,6 @@ def four_dsix_drop():
         stat = 0
         for number in dice:
             stat += number  # add all the remaining numbers from the list
-        stats.append(stat)  # at the stat to a list for this character's stats
-    stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
-    print("Stats completed! \n")
-
-
-def three_dsix_drop():
-    charac = input("What's you character's name?: ")
-    names.append(charac)  # add the name of the character to a list for the summary at the end
-    stats = []  # makes sure this list is empty again before adding stats to it
-    for i in range(6):
-        dice = [rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6),
-                rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6),
-                rand.randint(1, 6) + rand.randint(1, 6) + rand.randint(1, 6)
-                ]  # 3 times 3d6 for one stat
-        stat = max(dice)
         stats.append(stat)  # at the stat to a list for this character's stats
     stats_tot.append(stats)  # put the list of the stats for this character in a list for the summary at the end
     print("Stats completed! \n")
