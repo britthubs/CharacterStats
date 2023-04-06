@@ -1,6 +1,6 @@
 # CharacterStats
-A program that rolls stats for dnd characters. Right now only the 3d6 and 4d6 drop lowest methods
-are available, but eventually more methods will be added.
+A program that rolls stats for dnd characters. Right now it only supports 3 roll methods,
+but eventually more methods will be added.
 
 ## Table of contents
 - [Overview](#overview)
