@@ -17,13 +17,8 @@ def initialise():
     curses.start_color()
     return stdscr
 
-stdscr = initialise()
 
-# Define colors for highlighting selected option
-curses.init_pair(1, curses.COLOR_MAGENTA, curses.COLOR_BLACK)
-highlight = curses.color_pair(1)
-
-# Define method menu options
+# define method menu options
 methods = [
     "1: roll 3d6 and add them",
     "2: roll 3d6 and add them 3 times, pick the highest",
@@ -31,26 +26,20 @@ methods = [
 ]
 selected_method = 0
 
-# Disable input buffering
-stdscr.nodelay(1)
 
-# Set a timeout for getch()
-stdscr.timeout(100)
-
-
-def print_menu(stdscr, selected_idx):  # Function to print menu options
-    stdscr.clear()  # Clear the screen
+def print_menu(stdscr, selected_idx):  # function to print menu options
+    stdscr.clear()  # clear the screen
     stdscr.addstr(0, 0, "Method Menu:\n", curses.A_UNDERLINE)
     for i, option in enumerate(methods):
         if i == selected_idx:
             stdscr.addstr(option + "\n", highlight)
         else:
             stdscr.addstr(option + "\n")
-    stdscr.refresh()  # Refresh the screen
-    curses.doupdate()  # Manually flush the console buffer
+    stdscr.refresh()  # refresh the screen
+    curses.doupdate()  # manually flush the console buffer
 
 
-def navigate_menu(stdscr):  # Function to handle arrow key navigation
+def navigate_menu(stdscr):  # function to handle arrow key navigation
     global selected_method
     while True:
         key = stdscr.getch()
@@ -143,23 +132,29 @@ print("🎲 Character Stats Generator 🎲")
 print("*" * 31)
 
 # Display menu and handle user input
-navigate_menu(stdscr)
-callFunc()
+stdscr = initialise()
+curses.init_pair(1, curses.COLOR_MAGENTA, curses.COLOR_BLACK)  # define colors for highlighting selected option
+highlight = curses.color_pair(1)
+# disable input buffering
+stdscr.nodelay(1)
 
+# set a timeout for getch()
+stdscr.timeout(100)
+navigate_menu(stdscr)
+curses.endwin()
 
 # ask for repeat or not
 while True:
-    curses.endwin()
-    again = input("Roll for new character? \ny or n: ")
-    while again != "y" and again != "n":
-        again = input("Only write y for 'yes' and n for 'no' \nRoll for new character? \ny or n: ")
-    if again == "n":
+    again = input("Roll for a new character? (y/n): ")
+    while again.lower() not in ['y', 'n']:
+        again = input("Please enter 'y' for yes or 'n' for no. Roll for a new character? (y/n): ")
+    if again.lower() == 'n':
         break
     stdscr = initialise()
     navigate_menu(stdscr)
-    callFunc(selected_method)
 
 # print a summary of names and stats
+curses.endwin()
 os.system('cls' if os.name == 'nt' else 'clear')  # clear console
 print("These are your characters and their stats:")
 print("*" * 42, "\n")
