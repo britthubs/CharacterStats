@@ -6,6 +6,11 @@ but eventually more methods will be added.
 - [Overview](#overview)
   - [The goal](#the-goal)
   - [Usage](#usage)
+- [Roll Methods](#roll-methods)
+  - [Method 1](#method-1)
+  - [Method 2](#method-2)
+  - [Method 3](#method-3)
+  - [More to come...](#more-to-come...)
 - [Process](#process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
@@ -26,7 +31,7 @@ After this, they can decide if they want to add another character or not. When a
 the user chooses to not add any more characters and a summary of all characters and stats (colour coded)
 is given.
 
-## Contents
+## Roll Methods
 The included methods for rolling stats:
 ### Method 1
 3d6 is rolled and the results are added for each stat (for example for strength the results are 2,5,4 - the strength stat is 11)
