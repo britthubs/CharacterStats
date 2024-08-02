@@ -28,13 +28,13 @@ is given.
 
 ## Contents
 The included methods for rolling stats:
-### method 1
+### Method 1
 3d6 is rolled and the results are added for each stat (for example for strength the results are 2,5,4 - the strength stat is 11)
 
-### method 2
+### Method 2
 Same as method 1, but repeated 3 times for each stat and the highest is picked (for example for strength the three stats are 11, 16, 10 - the strength stat is 16)
 
-### method 3
+### Method 3
 4d6 is rolled, the lowest result is dropped and the rest is added for each stat (for example for strength the results are 2,5,4,6 - the strength stat is 15)
 
 ### More to come...
