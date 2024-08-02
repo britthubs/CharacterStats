@@ -1,5 +1,5 @@
 # CharacterStats
-A program that rolls stats for dnd characters. Right now it only supports 3 roll methods,
+A program that rolls stats for D&D characters. Currently it only supports three roll methods,
 but eventually more methods will be added.
 
 ## Table of contents
@@ -26,6 +26,13 @@ After this, they can decide if they want to add another character or not. When a
 the user chooses to not add any more characters and a summary of all characters and stats (colour coded)
 is given.
 
+## Contents
+The included methods for rolling stats:
+- method 1: 3d6 is rolled and the results are added for each stat (for example for strength the results are 2,5,4 - the strength stat is 11)
+- method 2: same as method 1, but repeated 3 times for each stat and the highest is picked (for example for strength the three stats are 11, 16, 10 - the strength stat is 16)
+- method 3: 4d6 is rolled, the lowest result is dropped and the rest is added for each stat (for example for strength the results are 2,5,4,6 - the strength stat is 15)
+
+More to come...
 
 ## Process
 
